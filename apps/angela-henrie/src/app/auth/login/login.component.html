@@ -1,0 +1,68 @@
+
+<div class="login">
+  <mat-card class="card">
+    <mat-card-header class="cardHeader">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content >
+
+      <div class="cardContent">
+        <form [formGroup]="login">
+
+          <mat-form-field class="formQ">
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              value=""
+              formControlName="email"
+              required
+
+            />
+            <mat-error *ngIf="!login.controls['email'].invalid">{{
+              login.controls['email'].getError
+            }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field  class="formQ">
+            <mat-label>Enter your Password</mat-label>
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+              required
+            />
+            <mat-error *ngIf="!login.controls['password'].invalid">{{
+              login.controls['password'].getError
+            }}</mat-error>
+          </mat-form-field>
+        </form>
+      </div>
+
+
+
+    </mat-card-content>
+
+
+
+    <mat-card-actions >
+
+      <div class="cardActions">
+        <span class="spacer">
+        <button class="btn" mat-raised-button color="accent" (click)="signInEmail()">Login</button>
+        </span>
+        <span class="spacer">
+          <button class="btn" mat-raised-button color="accent" (click)="signInGoogle()">Login Google</button>
+        </span>
+        <span class="spacer">
+          <button class="btn" mat-raised-button color="accent" (click)="onSignup()" >Signup</button>
+        </span>
+
+
+      </div>
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 /* eslint-disable @angular-eslint/contextual-lifecycle */
-import { angelaHenrieEnvironment } from './../../../../environments/environment';
+import { angelaHenrieEnvironment } from '@mantis/env';
 import { Injectable, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { CanActivate, Router } from '@angular/router';

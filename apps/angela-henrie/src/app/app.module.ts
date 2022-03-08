@@ -16,6 +16,7 @@ import { SidenavDrawerComponent } from './shared/sidenav-drawer/sidenav-drawer.c
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     MaterialsModule,
     AppRoutingModule,
     UiModule,
-    FormsModule
+    AuthModule
   ],
   providers: [
     AuthService

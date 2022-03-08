@@ -1,0 +1,49 @@
+<mat-toolbar  class="toolbar mat-elevation-z10" color="primary">
+  <button mat-button (click)="onToggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span ></span>
+  <img
+    src="https://firebasestorage.googleapis.com/v0/b/angela-henrie.appspot.com/o/IMG_1502.jpg?alt=media&token=8ad1694b-9f61-432a-9bd3-466bc752c01b"
+    class="toolbar-logo">
+
+  <mat-form-field class="searchbar-form-field">
+    <input placeholder="Search for a product" matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+    <button mat-icon-button class="icon" *ngIf="isLoggedIn === true" [matMenuTriggerFor]="user">
+      <img *ngIf="user$ | async as activeUser" style="
+        border-radius: 100%;
+         width: 25px;
+         height: 25px" src="{{ activeUser.photoURL }}">
+    </button>
+
+
+
+    <button *ngIf="isLoggedIn === false" mat-icon-button class="icon" [matMenuTriggerFor]="user">
+      <mat-icon>person</mat-icon>
+    </button>
+
+    <mat-menu
+      #user="matMenu"
+      xPosition="before"
+      panelClass="userMenu"
+      class="userMenu"
+      setElevation="100">
+      <button mat-menu-item *ngIf="isLoggedIn === false" [routerLink]="['/auth', 'login']">Login</button>
+      <button mat-menu-item *ngIf="isLoggedIn === false" [routerLink]="['/auth', 'signup']">Signup</button>
+      <button mat-menu-item>Orders</button>
+      <button mat-menu-item *ngIf="isLoggedIn === true" [routerLink]="['user/info']">Account Info</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+
+    <button [routerLink]="'cart'" mat-icon-button class="icon favorite-icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-form-field>
+
+</mat-toolbar>
+

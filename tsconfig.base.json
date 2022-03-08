@@ -1,22 +1,27 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@mantis/api-interfaces": ["libs/api-interfaces/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@mantis/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+            "@mantis/categories": ["libs/categories/src/index.ts"],
+            "@mantis/env": ["environments/environment.ts"],
+            "@mantis/envProd": ["environments/environment.prod.ts"],
+            "@mantis/products": ["libs/products/src/index.ts"],
+            "@mantis/ui": ["libs/ui/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }

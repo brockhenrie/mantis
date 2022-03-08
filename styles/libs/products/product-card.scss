@@ -1,0 +1,29 @@
+.products-card{
+  background-color: transparent;
+  border-radius: 10%;
+
+  .thumbnail-image{
+    :hover{
+      cursor: pointer;
+    }
+    height: 300px;
+
+
+
+  }
+
+  a{
+
+    text-decoration: none;
+    color: black;
+    :visited{
+      color: $accent-color;
+    }
+    :hover{
+
+      color: $accent-color;
+    }
+
+  }
+
+}

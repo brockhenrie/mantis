@@ -1,11 +1,28 @@
-<div style="text-align: center">
-  <h1>Welcome to angela-henrie!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
-<!-- NX_CLOUD_AUTH_TOKEN=(ZjM2YTZhN2YtMGRmNy00Nzk5LWJmNGMtOGQ1NDY2YjE1YzExfHJlYWQtd3JpdGU=) -->
+<div class="shell">
+<app-header (toggleSidenav)="drawer.toggle()"></app-header>
+    <mat-drawer-container class="sidenav-container">
+      <mat-drawer #drawer  class="drawer-container" mode="over">
+        <app-sidenav-drawer (navigated)="drawer.toggle()">
+        </app-sidenav-drawer>
+      </mat-drawer>
+      <mat-drawer-content class="content-container">
 
+          <router-outlet></router-outlet>
+
+
+      </mat-drawer-content>
+    </mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

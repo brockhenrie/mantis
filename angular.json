@@ -1,9 +1,12 @@
 {
-  "version": 2,
-  "projects": {
-    "angela-henrie": "apps/angela-henrie",
-    "angela-henrie-e2e": "apps/angela-henrie-e2e",
-    "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces"
-  }
+    "version": 2,
+    "projects": {
+        "angela-henrie": "apps/angela-henrie",
+        "angela-henrie-e2e": "apps/angela-henrie-e2e",
+        "api": "apps/api",
+        "api-interfaces": "libs/api-interfaces",
+        "categories": "libs/categories",
+        "products": "libs/products",
+        "ui": "libs/ui"
+    }
 }

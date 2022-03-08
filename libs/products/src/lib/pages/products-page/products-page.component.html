@@ -1,0 +1,10 @@
+<div class="products-page">
+  <div *ngIf="categories$ | async as categories" class="cat-filter">
+    <products-cat-filter [categories]="categories" (filterChange)="onFilterEvent($event)" ></products-cat-filter>
+  </div>
+
+  <div *ngIf="filteredProducts$ | async as products">
+    <products-grid [products]="products"></products-grid>
+  </div>
+</div>
+

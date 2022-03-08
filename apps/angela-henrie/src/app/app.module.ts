@@ -1,14 +1,40 @@
+import { angelaHenrieEnvironment } from './../../../../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+import { MaterialsModule } from './materials.module';
+import { UiModule } from '@mantis/ui';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './pages/home/home.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HeaderComponent } from './shared/header/header.component';
+import { SidenavDrawerComponent } from './shared/sidenav-drawer/sidenav-drawer.component';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { AngularFireModule } from '@angular/fire/compat';
+
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule, HttpClientModule],
-  providers: [],
+  declarations: [AppComponent, HomeComponent, HeaderComponent, SidenavDrawerComponent],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(angelaHenrieEnvironment.firebase),
+    AngularFireAuthModule,
+    BrowserAnimationsModule,
+    MaterialsModule,
+    AppRoutingModule,
+    UiModule,
+    FormsModule
+  ],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

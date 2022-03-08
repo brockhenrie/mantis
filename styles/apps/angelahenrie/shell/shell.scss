@@ -1,0 +1,53 @@
+.shell{
+  width: 100%;
+  height: 100%;
+  .toolbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    .spacer {
+      flex: 1 1 auto;
+    }
+
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 100;
+  &-logo{
+    width: 100px;
+    height: 50px;
+  }
+
+  }
+  .searchbar-form-field{;
+    margin-left: 64px;
+    width:33%;
+
+  }
+
+
+    .sidenav-container{
+
+      width: 100%;
+      height: 100%;
+
+      .content-container{
+        margin-top: 64px;
+        width: 100%;
+        height: 100%;
+
+      }
+
+      .drawer-container{
+        height: 100%;
+        width: 250px;
+
+      }
+
+    }
+
+
+
+}

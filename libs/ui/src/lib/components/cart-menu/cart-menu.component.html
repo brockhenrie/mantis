@@ -1,0 +1,16 @@
+<div class="auth-menu-trigger">
+  <button mat-icon-button [matMenuTriggerFor]="auth">
+      <mat-icon>shopping_cart</mat-icon>
+  </button>
+</div>
+
+<mat-menu #auth>
+      <a
+          mat-menu-item
+          *ngFor="let item of cartItems"
+          [routerLink]="['cart',item.id]"
+      >
+      <mat-icon >{{item.icon}}</mat-icon>
+          {{ item.label }}
+      </a>
+</mat-menu>

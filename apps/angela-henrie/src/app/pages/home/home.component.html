@@ -5,5 +5,13 @@
     >
         <ui-featured-products [products]="products"></ui-featured-products>
     </div> -->
-    <ui-carousel-image class="carousel-img"  [items]="images"></ui-carousel-image>
+
+    <div *ngIf="products$ | async as products">
+        <ui-carousel-product
+            class="carousel-img"
+            [items]="products"
+        ></ui-carousel-product>
+    </div>
+
+    <ui-carousel-image [items]="images"></ui-carousel-image>
 </div>

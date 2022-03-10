@@ -1,13 +1,15 @@
-<div class="toolbar">
+<div class="ui-toolbar mat-elevation-z12">
     <mat-toolbar [color]="tb.color">
-        <button *ngIf="tb.isHandset" mat-icon-button (click)="onToggleMenu()">
+        <button *ngIf="tb.isHandset" mat-icon-button (click)="onToggleDrawer()">
             <mat-icon>menu</mat-icon>
         </button>
-        <ui-toolbar-nav *ngIf="!tb.isHandset" [navInit]="tb.toolbarNav"></ui-toolbar-nav>
+        <ui-toolbar-nav *ngIf="!tb.isHandset" [navConfig]="tb.navConfig"></ui-toolbar-nav>
 
         <span class="spacer"></span>
-        <div class="toolbar-right">
 
-        </div>
+          <ui-auth-menu (closeNav)="onCloseDrawer()"></ui-auth-menu>
+          <ui-cart-menu></ui-cart-menu>
+
+
     </mat-toolbar>
 </div>

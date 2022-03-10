@@ -8,14 +8,14 @@ import { CarouselProduct } from '../../models/carousel-product.model';
 })
 export class CarouselProductComponent implements  OnInit {
 
-  @Input() items:CarouselProduct[] = [];
+  @Input() items!:CarouselProduct[];
   @Input()  indicators = true;
   @Input()  controls = true;
   @Input()  autoSlide = false;
   @Input()  slideInterval = 3000; //default to 3 seconds
    selectedIndex = 0;
 
-   
+
   constructor() {
   }
 

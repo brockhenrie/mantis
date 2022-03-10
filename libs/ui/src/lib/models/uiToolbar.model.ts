@@ -1,7 +1,8 @@
-import { UiToolbarNav } from "./toolbar-nav.model";
+import { NavItem } from "./nav-item.model";
+
 
 export interface UiToolbar {
     isHandset: boolean;
     color: 'primary' | 'accent' | 'warn';
-    toolbarNav: UiToolbarNav;
+    navConfig: NavItem[];
 }

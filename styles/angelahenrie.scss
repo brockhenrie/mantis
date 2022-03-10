@@ -45,16 +45,13 @@ $angela-henrie-theme: mat.define-light-theme((
 
 // Custom Theming for Angular Material
 
-//shell
-@import './apps/angelahenrie/shell/shell.scss';
-
-//ui
-@import './apps/angelahenrie/ui/sidenav-drawer.scss';
 
 
 //libs
 @import './libs/ui/ui.scss';
-@import './libs/carousel/carousel.scss';
+
+//shell
+@import './apps/angelahenrie/shell/shell.scss';
 
 //pages
 @import './apps/angelahenrie/pages/pages.scss';

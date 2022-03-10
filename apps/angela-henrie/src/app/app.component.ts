@@ -13,33 +13,26 @@ import { UiSidenav } from '@mantis/ui';
 export class AppComponent implements AfterViewInit {
     SNI: UiSidenav = {
         sidenavSide: 'end',
-        toolbar: {
+        toolbarConfig: {
             isHandset: false,
             color: 'primary',
-            toolbarNav: {
-                items: [
-                    {
-                        label: 'Home',
-                        icon: 'home',
-                        link: 'home'
-                    },
-                    {
-                        label: 'Products',
-                        icon: 'add',
-                        link: 'products'
-                    },
-                    {
-                        label: 'Account Info',
-                        icon: 'person',
-                        link: 'account'
-                    },
-                    {
-                        label: 'Settings',
-                        icon: 'settings',
-                        link: 'settings'
-                    }
-                ]
-            }
+            navConfig: [
+                {
+                    label: 'Home',
+                    icon: 'home',
+                    link: 'home'
+                },
+                {
+                    label: 'Products',
+                    icon: 'add',
+                    link: 'products'
+                },
+                {
+                    label: 'Settings',
+                    icon: 'settings',
+                    link: 'settings'
+                }
+            ]
         }
     };
 
@@ -47,17 +40,19 @@ export class AppComponent implements AfterViewInit {
     sidenav!: MatSidenav;
 
     isHandset!: boolean;
-    constructor(private bo: BreakpointObserver) {}
+    constructor(
+      private bo: BreakpointObserver
+      ) {}
 
     ngAfterViewInit(): void {
         this.bo.observe([Breakpoints.Handset]).subscribe((res) => {
             if (res.matches) {
-                this.SNI.toolbar.isHandset = true;
+                this.SNI.toolbarConfig.isHandset = true;
                 this.sidenav.mode = 'over';
                 this.sidenav.close();
                 this.sidenav.position = this.SNI.sidenavSide;
             } else {
-                this.SNI.toolbar.isHandset = false;
+                this.SNI.toolbarConfig.isHandset = false;
                 this.sidenav.close();
             }
         });
@@ -67,6 +62,6 @@ export class AppComponent implements AfterViewInit {
         this.sidenav.toggle();
     }
     closeNav() {
-        this.sidenav.toggle();
+        this.sidenav.close();
     }
 }

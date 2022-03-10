@@ -16,6 +16,8 @@ import { FeaturedProductsComponent } from './components/featured-products/featur
 import { StylesModule } from './modules/styles.module';
 import { CarouselImageComponent } from './components/carousel-image/carousel-image.component';
 import { CarouselProductComponent } from './components/carousel-product/carousel-product.component';
+import { AuthMenuComponent } from './components/auth-menu/auth-menu.component';
+import { CartMenuComponent } from './components/cart-menu/cart-menu.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, StylesModule],
@@ -32,6 +34,8 @@ import { CarouselProductComponent } from './components/carousel-product/carousel
         FeaturedProductsComponent,
         ProductsGridComponent,
         ProductCardComponent,
+        AuthMenuComponent,
+        CartMenuComponent,
     ],
     exports: [
       RouterModule,
@@ -46,6 +50,8 @@ import { CarouselProductComponent } from './components/carousel-product/carousel
       FeaturedProductsComponent,
       ProductsGridComponent,
       ProductCardComponent,
+      AuthMenuComponent,
+      CartMenuComponent,
 
     ]
 })

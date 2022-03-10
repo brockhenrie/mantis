@@ -1,0 +1,5 @@
+<mat-card class="product-card">
+  <img matCardImage class="thumbnail-image" [src]="product.image">
+
+        <a [routerLink]="['/products',product.id]">{{product.name}}</a>
+</mat-card>

@@ -17,8 +17,8 @@ export class ToolbarComponent implements OnInit {
     ngOnInit(): void {}
 
 
-    onToggleMenu(){
-      this.closeDrawer.emit();
+    onToggleDrawer(){
+      this.toggleDrawer.emit();
     }
 
     onCloseDrawer(){

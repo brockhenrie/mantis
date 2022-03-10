@@ -1,0 +1,17 @@
+<div class="auth-menu-trigger">
+    <button mat-icon-button [matMenuTriggerFor]="auth">
+        <mat-icon>person</mat-icon>
+    </button>
+</div>
+
+<mat-menu class="auth-menu" #auth="matMenu">
+    <a
+        mat-menu-item
+        *ngFor="let link of authLinks"
+        [routerLink]="[link.link]"
+        (click)="closeSidenav()"
+    >
+        <mat-icon>{{ link.icon }}</mat-icon>
+        {{ link.label }}
+    </a>
+</mat-menu>

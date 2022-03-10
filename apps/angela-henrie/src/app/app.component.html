@@ -1,6 +1,6 @@
 <div class="shell">
     <ui-toolbar
-        [tb]="SNI.toolbar"
+        [tb]="SNI.toolbarConfig"
         (toggleDrawer)="toggleNav()"
         (closeDrawer)="closeNav()"
     ></ui-toolbar>
@@ -8,12 +8,11 @@
         <mat-sidenav class="drawer-container mat-elevation-z8">
             <ui-nav-list
                 (closeDrawer)="closeNav()"
-                [navInit]="SNI.toolbar.toolbarNav"
+                [navConfig]="SNI.toolbarConfig.navConfig"
             ></ui-nav-list>
         </mat-sidenav>
         <div class="router-container">
-          <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
         </div>
-
     </mat-sidenav-container>
 </div>

@@ -1,0 +1,48 @@
+
+.login-page {
+    height: 100%;
+    width: 100%;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    .card {
+
+        width: 350px;
+        height: auto;
+
+        &-header{
+          display: flex;
+          direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 32px;
+        }
+
+        &-content{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .formQ{
+
+            width: 66%;
+          }
+        }
+
+        &-actions{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 32px;
+          button{
+
+            width: 66%;
+            margin-bottom: 8px;
+          }
+        }
+    }
+}

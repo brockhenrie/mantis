@@ -2,6 +2,7 @@
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {UiModule} from '@mantis/ui'
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -27,8 +28,6 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 
 //components
-import { ProductsGridComponent } from './components/products-grid/products-grid.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ShellComponent } from './components/shell/shell.component';
 
 //services
@@ -48,6 +47,7 @@ const routes: Routes = [
 @NgModule({
     imports: [
         CommonModule,
+        UiModule,
         AngularFireModule.initializeApp(angelaHenrieEnvironment.firebase),
         AngularFireAnalyticsModule,
         AngularFirestoreModule,
@@ -73,9 +73,9 @@ const routes: Routes = [
         AngularFireStorageModule,
         AngularFireAuthModule,
         HttpClientModule,
-        ProductCardComponent
+
     ],
-    declarations: [ShellComponent, ProductsGridComponent, ProductCardComponent, ProductsPageComponent, CategoriesFilterComponent, ProductItemComponent],
+    declarations: [ShellComponent, ProductsPageComponent, CategoriesFilterComponent, ProductItemComponent],
     providers: [
         ScreenTrackingService,
         UserTrackingService,

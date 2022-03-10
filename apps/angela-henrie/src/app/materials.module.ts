@@ -8,7 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatMenuModule} from '@angular/material/menu';
-import { MatDivider } from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule } from '@angular/forms';
 
 
@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatMenuModule,
     MatCardModule,
-    MatDivider,
+    MatDividerModule,
     FormsModule
   ],
   exports: [
@@ -37,7 +37,7 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatMenuModule,
     MatCardModule,
-    MatDivider,
+    MatDividerModule,
     FormsModule
   ]
 })

@@ -1,0 +1,14 @@
+<div class="toolbar-nav">
+    <div class="toolbar-nav-items">
+        <button
+            mat-flat-button
+            [color]="'primary'"
+            *ngFor="let link of navInit.items"
+            [routerLink]="[link.link]"
+        >
+            <mat-icon class="mat-18">{{ link.icon }}</mat-icon>
+            {{ link.label }}
+        </button>
+    </div>
+</div>
+

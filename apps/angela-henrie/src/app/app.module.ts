@@ -13,10 +13,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidenavDrawerComponent } from './shared/sidenav-drawer/sidenav-drawer.component';
-import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AuthModule } from './auth/auth.module';
+import { ProductDataService } from '@mantis/products';
 
 
 @NgModule({
@@ -28,12 +28,15 @@ import { AuthModule } from './auth/auth.module';
     AngularFireAuthModule,
     BrowserAnimationsModule,
     MaterialsModule,
-    AppRoutingModule,
     UiModule,
-    AuthModule
+    AuthModule,
+    AppRoutingModule
+
+
   ],
   providers: [
-    AuthService
+    AuthService,
+    ProductDataService
   ],
   bootstrap: [AppComponent],
 })

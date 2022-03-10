@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, combineLatest, map, tap } from 'rxjs';
-import { Product } from '../../../../../products/src/lib/models/product.model';
+
 
 @Component({
   selector: 'ui-shell',
@@ -8,6 +9,5 @@ import { Product } from '../../../../../products/src/lib/models/product.model';
 })
 export class ShellComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 }

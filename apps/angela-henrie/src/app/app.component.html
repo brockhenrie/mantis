@@ -1,28 +1,19 @@
 <div class="shell">
-<app-header (toggleSidenav)="drawer.toggle()"></app-header>
-    <mat-drawer-container class="sidenav-container">
-      <mat-drawer #drawer  class="drawer-container" mode="over">
-        <app-sidenav-drawer (navigated)="drawer.toggle()">
-        </app-sidenav-drawer>
-      </mat-drawer>
-      <mat-drawer-content class="content-container">
-
+    <ui-toolbar
+        [tb]="SNI.toolbar"
+        (toggleDrawer)="toggleNav()"
+        (closeDrawer)="closeNav()"
+    ></ui-toolbar>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav class="drawer-container mat-elevation-z8">
+            <ui-nav-list
+                (closeDrawer)="closeNav()"
+                [navInit]="SNI.toolbar.toolbarNav"
+            ></ui-nav-list>
+        </mat-sidenav>
+        <div class="router-container">
           <router-outlet></router-outlet>
+        </div>
 
-
-      </mat-drawer-content>
-    </mat-drawer-container>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </mat-sidenav-container>
 </div>

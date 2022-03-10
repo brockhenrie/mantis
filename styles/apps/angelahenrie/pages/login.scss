@@ -1,0 +1,15 @@
+
+
+
+.login-page {
+  .card {
+      &-actions{
+        button{
+          :hover{
+            color: grey
+          }
+          background-color: $accent-color;
+        }
+      }
+  }
+}

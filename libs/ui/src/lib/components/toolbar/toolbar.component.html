@@ -1,0 +1,13 @@
+<div class="toolbar">
+    <mat-toolbar [color]="tb.color">
+        <button *ngIf="tb.isHandset" mat-icon-button (click)="onToggleMenu()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <ui-toolbar-nav *ngIf="!tb.isHandset" [navInit]="tb.toolbarNav"></ui-toolbar-nav>
+
+        <span class="spacer"></span>
+        <div class="toolbar-right">
+
+        </div>
+    </mat-toolbar>
+</div>

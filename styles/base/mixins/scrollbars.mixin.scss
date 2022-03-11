@@ -1,0 +1,29 @@
+@mixin scrollbars($size, $front-color, $back-color) {
+    //chrome specific
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-clip: padding-box;
+      height: ($size/2);
+      background: $front-color;
+      -webkit-box-shadow:
+      inset -1px -1px 0px rgba(0,0,0,0.15),
+      inset 1px 1px 0px rgba(0,0,0,0.15);
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 10px;
+    border-radius:15px;
+      background: $back-color;
+
+  }
+
+
+    //ie
+    & {
+      scrollbar-face-color: $front-color;
+      scrollbar-track-color: $back-color;
+  }
+}

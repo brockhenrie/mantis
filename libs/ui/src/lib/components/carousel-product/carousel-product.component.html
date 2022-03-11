@@ -1,29 +1,17 @@
 <div class="carousel-products-container" *ngIf="items && items.length > 0">
-    <div  *ngFor="let item of items; let i = index;">
-        <ui-product-card  [ngClass]="{ 'item-active': selectedIndex === i }" [product]="item"></ui-product-card>
-    </div>
+    <cdk-virtual-scroll-viewport
+        templateCacheSize="20"
+        orientation="horizontal"
+        class="carousel-products-container-viewport"
+        [itemSize]="items.length"
 
-    <div *ngIf="indicators" class="carousel-dot-container">
-        <span
-            *ngFor="let dot of items; let i = index"
-            class="dot"
-            [ngClass]="{ active: selectedIndex === i }"
-            (click)="selectItem(i)"
-        >
-        </span>
-    </div>
-    <button
-        *ngIf="controls"
-        class="btn-carousel btn-prev"
-        (click)="onPrevClick()"
     >
-        <i class="fas fa-arrow-circle-left icon-carousel icon-prev"> </i>
-    </button>
-    <button
-        *ngIf="controls"
-        class="btn-next btn-carousel"
-        (click)="onNextClick()"
-    >
-        <i class="fas fa-arrow-circle-right icon-carousel icon-next"> </i>
-    </button>
+        <ui-product-card
+            class="carousel-card-container"
+            *cdkVirtualFor="let item of items"
+            [product]="item"
+        ></ui-product-card>
+    </cdk-virtual-scroll-viewport>
+
+
 </div>

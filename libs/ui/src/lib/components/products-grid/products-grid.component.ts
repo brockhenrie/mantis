@@ -12,7 +12,8 @@ export class ProductsGridComponent implements OnInit {
   @Input() products!:CarouselProduct[]
     constructor() {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+    }
 
 
 }

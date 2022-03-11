@@ -1,5 +1,17 @@
-<mat-card class="product-card">
-  <img matCardImage class="thumbnail-image" [src]="product.image">
-
-        <a [routerLink]="['/products',product.id]">{{product.name}}</a>
+<mat-card class="products-card mat-elevation-z1">
+    <div>
+        <img
+            matCardImage
+            [routerLink]="['/products', product.id]"
+            class="thumbnail-image"
+            [src]="product.image"
+        />
+    </div>
+    <div class="card-content" fxLayout="column">
+        <a [routerLink]="['/products', product.id]"
+        class="card-title">{{ product.name }}</a
+        >
+        <div class="spacer"></div>
+        <p>{{ product.price | currency: 'USD' }}</p>
+    </div>
 </mat-card>

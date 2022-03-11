@@ -18,6 +18,7 @@ import { CarouselImageComponent } from './components/carousel-image/carousel-ima
 import { CarouselProductComponent } from './components/carousel-product/carousel-product.component';
 import { AuthMenuComponent } from './components/auth-menu/auth-menu.component';
 import { CartMenuComponent } from './components/cart-menu/cart-menu.component';
+import { BackgroundSpinnerComponent } from './components/background-spinner/background-spinner.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, StylesModule],
@@ -36,6 +37,7 @@ import { CartMenuComponent } from './components/cart-menu/cart-menu.component';
         ProductCardComponent,
         AuthMenuComponent,
         CartMenuComponent,
+        BackgroundSpinnerComponent,
     ],
     exports: [
       RouterModule,
@@ -52,6 +54,7 @@ import { CartMenuComponent } from './components/cart-menu/cart-menu.component';
       ProductCardComponent,
       AuthMenuComponent,
       CartMenuComponent,
+      BackgroundSpinnerComponent,
 
     ]
 })

@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         MatListModule,
         MatCardModule,
         MatFormFieldModule,
+        ScrollingModule
     ],
     exports: [
       CommonModule,
@@ -38,6 +40,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
       MatListModule,
       MatCardModule,
       MatFormFieldModule,
+      ScrollingModule
 
     ]
 })

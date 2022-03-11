@@ -5,6 +5,8 @@
 //scss reset
 @import './base/reset.scss';
 
+@import './base/mixins/scrollbars.mixin.scss';
+
 
 
 
@@ -46,12 +48,18 @@ $angela-henrie-theme: mat.define-light-theme((
 // Custom Theming for Angular Material
 
 
+@import'./base/configuration.scss';
 
-//libs
-@import './libs/ui/ui.scss';
+
 
 //shell
 @import './apps/angelahenrie/shell/shell.scss';
 
+//libs
+@import './libs/ui/ui.scss';
+
 //pages
 @import './apps/angelahenrie/pages/pages.scss';
+
+
+

@@ -6,15 +6,22 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-home',
-    templateUrl: './home.component.html'
+    templateUrl: './home.component.html',
+
 })
 export class HomeComponent implements OnInit {
+  state='start';
   images = images;
     products$!: Observable<Product[]>;
     constructor(private ps: ProductDataService) {}
 
     ngOnInit(): void {
       this.products$ = this.ps.getProducts();
+    }
+
+    onAnimate(){
+      setTimeout(()=>{},250);
+      this.state == 'start' ? this.state = 'finish' : this.state = 'start';
     }
 }
 

@@ -4,14 +4,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Injectable } from '@angular/core';
 import {
-    AngularFirestore,
-    AngularFirestoreCollection
-} from '@angular/fire/compat/firestore';
+    AngularFirestore} from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { angelaHenrieEnvironment } from '@mantis/env';
-import { Observable, tap, shareReplay, catchError, EMPTY, of } from 'rxjs';
-import { Category } from './models/category.model';
-import { Product } from './models/product.model';
+import { Observable, shareReplay, catchError, of } from 'rxjs';
+import { Category, Product } from '@mantis/core';
+
 
 @Injectable()
 export class ProductDataService {

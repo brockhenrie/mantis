@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Category } from '../../models/category.model';
+import { Category } from '@mantis/core';
 
 @Component({
   selector: 'products-cat-filter',

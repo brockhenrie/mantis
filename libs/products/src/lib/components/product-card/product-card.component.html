@@ -1,7 +1,0 @@
-<mat-card class="products-card mat-elevation-z1"  >
-  <img matCardImage [routerLink]="['/products',product.id]" class="thumbnail-image" [src]="product.image">
-  <mat-card-content align="center" class="card-content" fxLayout="column">
-   <a [routerLink]="['/products',product.id]" ><h2>{{product.name}}</h2></a>
-   <p>{{product.price | currency:'USD'}}</p>
-  </mat-card-content>
-</mat-card>

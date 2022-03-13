@@ -24,9 +24,10 @@ import { ProductDataService } from '@mantis/products';
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(angelaHenrieEnvironment.firebase),
     AngularFireAuthModule,
-    BrowserAnimationsModule,
+
     MaterialsModule,
     UiModule,
     AuthModule,

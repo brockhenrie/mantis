@@ -4,7 +4,7 @@ import { combineLatest, map, Observable } from 'rxjs';
 import { ProductDataService } from './../../product-data.service';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Product } from '../../models/product.model';
+import { Product } from '../../../../../core/src/lib/models/products/product.model';
 
 @Component({
     selector: 'products-page',

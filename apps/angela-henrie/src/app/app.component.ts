@@ -1,14 +1,21 @@
+import { fader } from './app-routing/router-animations/fader';
 /* eslint-disable @typescript-eslint/no-empty-function */
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { RouterOutlet } from '@angular/router';
 import { UiSidenav } from '@mantis/ui';
+import { slide } from './app-routing/router-animations/slide';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    animations: [
+      //fader
+      slide
+    ]
 })
 export class AppComponent implements AfterViewInit {
     SNI: UiSidenav = {
@@ -57,6 +64,11 @@ export class AppComponent implements AfterViewInit {
             }
         });
     }
+
+    prepareRoute(outlet: RouterOutlet){
+      return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    }
+
 
     toggleNav() {
         this.sidenav.toggle();

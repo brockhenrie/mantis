@@ -1,12 +1,14 @@
 <ui-background-spinner
-[image]="'../../../assets/pink-rose-1.png'"
+[image]="backgroundAnimatedImage"
+[show]="showSpinner"
 ></ui-background-spinner>
 <div class="home-page">
-
   <div class="spacer">
 
   </div>
     <div class="footer">
+      <button (click)="showSpinner = !showSpinner">Hide Spinner</button>
+
         <div class="carousel" *ngIf="products$ | async as products">
             <ui-carousel-product [items]="products"></ui-carousel-product>
         </div>

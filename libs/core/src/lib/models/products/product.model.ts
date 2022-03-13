@@ -1,4 +1,3 @@
-import { Category } from './category.model';
 
 export interface Product {
     name: string;
@@ -12,4 +11,9 @@ export interface Product {
     isFeatured?: boolean;
     id?: string;
     dateCreated: Date;
+}
+
+export interface ProductsResolved{
+  products: Product[];
+  error?:any;
 }

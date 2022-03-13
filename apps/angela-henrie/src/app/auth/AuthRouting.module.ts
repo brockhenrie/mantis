@@ -8,12 +8,15 @@ const routes: Route[] = [
   {
     path: 'auth',
     component: AuthComponent,
+    data: {animtion: 'right'},
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
     ],
+
   },
+
 ];
 
 @NgModule({

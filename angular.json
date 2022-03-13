@@ -6,6 +6,7 @@
         "api": "apps/api",
         "api-interfaces": "libs/api-interfaces",
         "categories": "libs/categories",
+        "core": "libs/core",
         "products": "libs/products",
         "ui": "libs/ui"
     }

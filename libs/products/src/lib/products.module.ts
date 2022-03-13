@@ -2,8 +2,8 @@
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {UiModule} from '@mantis/ui'
-
+import {UiModule} from '@mantis/ui';
+import {CoreModule as MantisCoreModule} from '@mantis/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -47,6 +47,7 @@ const routes: Routes = [
 @NgModule({
     imports: [
         CommonModule,
+        MantisCoreModule,
         UiModule,
         AngularFireModule.initializeApp(angelaHenrieEnvironment.firebase),
         AngularFireAnalyticsModule,
@@ -68,7 +69,6 @@ const routes: Routes = [
         RouterModule,
         ShellComponent,
         AngularFireModule,
-        AngularFireAnalyticsModule,
         AngularFirestoreModule,
         AngularFireStorageModule,
         AngularFireAuthModule,

@@ -1,23 +1,36 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
-import { Product, ProductDataService } from '@mantis/products';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Product } from '@mantis/products';
+import { filter, map, Observable } from 'rxjs';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
+    animations: [
+
+    ],
+    providers: [
+
+    ]
 
 })
 export class HomeComponent implements OnInit {
   state='start';
   images = images;
+  showSpinner=true;
+  backgroundAnimatedImage= '../../../assets/Large_Light_Pink_Rose.png';
     products$!: Observable<Product[]>;
-    constructor(private ps: ProductDataService) {}
+    constructor(private route:ActivatedRoute) {}
 
     ngOnInit(): void {
-      this.products$ = this.ps.getProducts();
+      this.products$ = this.route.data.pipe(
+        map((data) => data['products'])
+      );
     }
+
+
 
     onAnimate(){
       setTimeout(()=>{},250);

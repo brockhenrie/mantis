@@ -1,5 +1,2 @@
-import { triggers } from './triggers/triggers';
-
-export default {
-   ...triggers,
-  }
+export * from './triggers/fade-in.animation';
+export * from './triggers/fade-in.animation';

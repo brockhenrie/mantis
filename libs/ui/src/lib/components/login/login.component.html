@@ -8,8 +8,8 @@
                 <mat-form-field color="primary-light"  class="formQ">
                     <mat-label>Enter your email</mat-label>
                     <input matInput text="accent" value="" formControlName="email" />
-                    <mat-error *ngIf="!login.controls['email'].invalid">{{
-                        login.controls['email'].getError
+                    <mat-error *ngIf="login.controls['email'].invalid">{{
+                        login.controls['email']
                     }}</mat-error>
                 </mat-form-field>
 

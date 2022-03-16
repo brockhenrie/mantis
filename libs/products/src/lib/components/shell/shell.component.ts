@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ProductDataService } from '../../product-data.service';
+import { ProductDataService } from '@mantis/core';
 
 
 

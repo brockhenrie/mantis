@@ -15,3 +15,4 @@ export * from './lib/models/carousel-image.model';
 export * from './lib/models/carousel-product.model';
 export * from './lib/models/carousel-item.model';
 
+export * from './lib/components/components'

@@ -28,6 +28,7 @@
     "@nestjs/platform-express": "^8.0.0",
     "@nrwl/angular": "13.8.5",
     "firebase": "^9.4.0",
+    "ng-event-bus": "^4.0.0",
     "normalize.css": "^8.0.1",
     "reflect-metadata": "^0.1.13",
     "rxfire": "^6.0.0",

@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "../../libs/core/src/lib/providers/auth.service.ts", "../../libs/auth/src/lib/auth-routing/AuthRouting.module.ts"],
   "compilerOptions": {
     "types": ["jest", "node"]
   }

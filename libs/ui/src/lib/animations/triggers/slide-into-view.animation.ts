@@ -31,6 +31,6 @@ export function slideIntoViewTransition(
 ): AnimationTransitionMetadata {
     return transition(
         'void => *',
-        animate(toEndTime, style({ transform: `translateX(-${distance}px)` }))
+        animate(toEndTime, style({ transform: `translateX(${distance}px)` }))
     );
 }

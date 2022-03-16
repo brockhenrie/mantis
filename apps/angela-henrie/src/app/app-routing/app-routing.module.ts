@@ -3,16 +3,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../pages/home/home.component';
-import { HomeProductsResolver } from '../resolvers/home-products.resolver';
+import { resolvers }  from '@mantis/core';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     {
         path: 'home',
         component: HomeComponent,
-        data: { animation: 'right' },
         resolve: {
-           products: HomeProductsResolver
+           products: resolvers.HomeProductsResolver
            }
     },
     {
@@ -32,7 +31,7 @@ const routes: Routes = [
     ],
     exports: [RouterModule],
     providers: [
-      HomeProductsResolver
+      resolvers.HomeProductsResolver
     ]
 })
 export class AppRoutingModule {}

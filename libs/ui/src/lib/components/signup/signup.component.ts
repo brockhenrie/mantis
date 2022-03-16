@@ -3,12 +3,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '@mantis/core';
 
 @Component({
-  selector: 'app-signup',
+  selector: 'ui-signup',
   templateUrl: './signup.component.html',
-  
+
 })
 export class SignupComponent implements OnInit {
 

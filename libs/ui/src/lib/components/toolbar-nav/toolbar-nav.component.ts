@@ -9,7 +9,7 @@ import { NavItem } from '../../models/nav-item.model';
 })
 export class ToolbarNavComponent implements OnInit {
   @Input() navConfig!:NavItem[];
-    constructor() {}
+ 
 
     ngOnInit(): void {}
 

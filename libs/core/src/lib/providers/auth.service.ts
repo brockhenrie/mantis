@@ -73,6 +73,9 @@ export class AuthService implements OnInit, CanActivate {
     signInGoogle() {
       let er = false;
       this.afAuth.signInWithPopup( new firebase.auth.GoogleAuthProvider())
+      .then(() => {
+        this.router.navigate(['/home']);
+      })
       .catch(error=> {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -99,9 +102,12 @@ export class AuthService implements OnInit, CanActivate {
 
     signInEmail(email:string, pass:string){
       this.afAuth.signInWithEmailAndPassword(email,pass)
+      .then(() => {
+        this.isLoggedIn$.next(true);
+        this.router.navigate(['/home']);
+      })
       .catch((error)=>{
         const errorCode = error.code;
-        const errorMessage = error.message;
         if (errorCode === 'auth/invalid-email'){
           alert('Invalid Email ' );
           this.isLoggedIn$.next(false);
@@ -115,28 +121,20 @@ export class AuthService implements OnInit, CanActivate {
           alert('Wrong Password ');
           this.isLoggedIn$.next(false);
         }else {
+          this.isLoggedIn$.next(false);
           this.router.navigate(['/home']);
-
         }
       });
-      this.isLoggedIn$.next(true);
+
 
     }
 
     logout() {
-      this.afAuth.signOut();
-      this.afAuth.signInAnonymously()
-      .catch((error)=> {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+      this.afAuth.signOut().then(() => {
+        this.isLoggedIn$.next(false);
+        this.router.navigate(['/home']);
+      })
 
-        if (errorCode === 'auth/operation-not-allowed') {
-          alert('You must enable Anonymous auth in the Firebase Console.');
-        } else {
-          console.error(error);
-        }
-      });
-      this.isLoggedIn$.next(false);
     }
 
     canActivate(): Observable<boolean> {

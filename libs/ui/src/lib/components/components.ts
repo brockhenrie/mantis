@@ -4,16 +4,18 @@ import { CarouselImageComponent } from './carousel-image/carousel-image.componen
 import { CarouselProductComponent } from './carousel-product/carousel-product.component';
 import { CartMenuComponent } from './cart-menu/cart-menu.component';
 import { FeaturedProductsComponent } from './featured-products/featured-products.component';
+import { LoginComponent } from './login/login.component';
 import { NavListComponent } from './nav-list/nav-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductsGridComponent } from './products-grid/products-grid.component';
 import { ShellComponent } from './shell/shell.component';
 import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { SignupComponent } from './signup/signup.component';
 import { ToolbarNavComponent } from './toolbar-nav/toolbar-nav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { UiSearchbarComponent } from './ui-searchbar/ui-searchbar.component';
 
-export const UiComponents = [
+export const UiComponentBarrel = [
     ShellComponent,
     SidenavListComponent,
     UiSearchbarComponent,
@@ -27,5 +29,26 @@ export const UiComponents = [
     ProductCardComponent,
     AuthMenuComponent,
     CartMenuComponent,
-    BackgroundSpinnerComponent
+    BackgroundSpinnerComponent,
+    LoginComponent,
+    SignupComponent
 ];
+
+export const uiComponents = {
+  ShellComponent,
+  SidenavListComponent,
+  UiSearchbarComponent,
+  CarouselImageComponent,
+  CarouselProductComponent,
+  ToolbarComponent,
+  NavListComponent,
+  ToolbarNavComponent,
+  FeaturedProductsComponent,
+  ProductsGridComponent,
+  ProductCardComponent,
+  AuthMenuComponent,
+  CartMenuComponent,
+  BackgroundSpinnerComponent,
+  LoginComponent,
+  SignupComponent
+};

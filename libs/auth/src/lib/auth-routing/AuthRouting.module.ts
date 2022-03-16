@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { AuthComponent } from './auth.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { AuthShellComponent } from '../auth.component';
+import { uiComponents } from '@mantis/ui';
+
 
 const routes: Route[] = [
   {
     path: 'auth',
-    component: AuthComponent,
-    data: {animtion: 'right'},
+    component: AuthShellComponent,
+    data: {animation:'isLeft'},
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent },
-      { path: 'signup', component: SignupComponent },
+      { path: 'login', component: uiComponents.LoginComponent },
+      { path: 'signup', component: uiComponents.SignupComponent },
     ],
 
   },

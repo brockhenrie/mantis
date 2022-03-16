@@ -5,7 +5,7 @@
         (closeDrawer)="closeNav()"
     ></ui-toolbar>
     <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav class="drawer-container mat-elevation-z8">
+        <mat-sidenav #nav class="drawer-container mat-elevation-z8">
             <ui-nav-list
                 (closeDrawer)="closeNav()"
                 [navConfig]="SNI.toolbarConfig.navConfig"

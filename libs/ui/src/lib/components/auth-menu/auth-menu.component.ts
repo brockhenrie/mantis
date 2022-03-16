@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { EventBusService } from '@mantis/core';
+import { tap } from 'rxjs';
 import { NavItem } from '../../models/nav-item.model';
 
 @Component({
@@ -15,6 +17,19 @@ export class AuthMenuComponent implements OnInit {
         { link: 'auth/login', label: 'Login', icon: 'login' },
         { link: 'auth/logout', label: 'Logout', icon: 'logout' },
     ];
+
+    isLoggedIn$ = this.eventBus.onListen('Auth - isLoggedIn').pipe(
+      tap((value) => {
+        this.authLinks.filter((item) => {
+          if (item.label === 'Login'){
+            return  value ? true : false;
+          }
+          else return true;
+        })
+      })
+    );
+
+    constructor(private eventBus:EventBusService) {}
 
     ngOnInit(): void {}
     closeSidenav(){

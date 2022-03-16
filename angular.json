@@ -5,6 +5,7 @@
         "angela-henrie-e2e": "apps/angela-henrie-e2e",
         "api": "apps/api",
         "api-interfaces": "libs/api-interfaces",
+        "auth": "libs/auth",
         "categories": "libs/categories",
         "core": "libs/core",
         "products": "libs/products",

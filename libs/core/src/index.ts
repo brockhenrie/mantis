@@ -12,6 +12,7 @@ export * from './lib/providers/event-bus.service';
 
 //resolvers
 export  * from './lib/resolvers/resolvers';
+export * from './lib/resolvers/home-products.resolver';
 
 //router animations
 export * from './lib/router-animations/slide';
@@ -20,4 +21,4 @@ export * from './lib/router-animations/prepareRoute.function';
 export * from './lib/router-animations/transformer.animations';
 
 //directives
-export * from './lib/directives/unless.directive'
+export * from './lib/directives/unless.directive';

@@ -17,6 +17,7 @@
         "paths": {
             "@mantis/api-interfaces": ["libs/api-interfaces/src/index.ts"],
             "@mantis/auth": ["libs/auth/src/index.ts"],
+            "@mantis/blog": ["libs/blog/src/index.ts"],
             "@mantis/categories": ["libs/categories/src/index.ts"],
             "@mantis/core": ["libs/core/src/index.ts"],
             "@mantis/env": ["environments/environment.ts"],

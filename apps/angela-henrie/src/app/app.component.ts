@@ -30,6 +30,11 @@ export class AppComponent implements OnInit {
                     link: 'home'
                 },
                 {
+                  label: 'Blog',
+                  icon: 'newspaper',
+                  link: 'blog'
+              },
+                {
                     label: 'Products',
                     icon: 'add',
                     link: 'products'

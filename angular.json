@@ -6,6 +6,7 @@
         "api": "apps/api",
         "api-interfaces": "libs/api-interfaces",
         "auth": "libs/auth",
+        "blog": "libs/blog",
         "categories": "libs/categories",
         "core": "libs/core",
         "products": "libs/products",

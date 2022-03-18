@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { AuthShellComponent } from '../auth.component';
-import { uiComponents } from '@mantis/ui';
+import { LoginComponent, SignupComponent } from '@mantis/ui';
 
 
 const routes: Route[] = [
@@ -11,8 +11,8 @@ const routes: Route[] = [
     data: {animation:'isLeft'},
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: uiComponents.LoginComponent },
-      { path: 'signup', component: uiComponents.SignupComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
     ],
 
   },

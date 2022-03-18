@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 
 export const MatModules = [
@@ -22,4 +23,7 @@ export const MatModules = [
   MatFormFieldModule,
   ScrollingModule,
   MatInputModule,
+  MatListModule,
+  MatSelectModule
+
 ]

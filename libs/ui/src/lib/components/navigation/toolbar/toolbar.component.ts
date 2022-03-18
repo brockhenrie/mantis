@@ -1,7 +1,7 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { UiToolbar } from '../../models/uiToolbar.model';
+import { UiToolbar } from '../../../models/uiToolbar.model';
 
 @Component({
     selector: 'ui-toolbar',

@@ -3,7 +3,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { EventBusService } from '@mantis/core';
 import { tap } from 'rxjs';
-import { NavItem } from '../../models/nav-item.model';
+import { NavItem } from '../../../models/nav-item.model';
 
 @Component({
     selector: 'ui-auth-menu',

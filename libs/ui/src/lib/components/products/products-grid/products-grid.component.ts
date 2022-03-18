@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, Input, OnInit } from '@angular/core';
 
-import { CarouselProduct } from '../../models/carousel-product.model';
+import { CarouselProduct } from '../../../models/carousel-product.model';
 
 @Component({
     selector: 'ui-products-grid',

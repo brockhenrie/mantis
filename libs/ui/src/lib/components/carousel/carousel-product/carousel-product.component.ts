@@ -1,19 +1,18 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, Input, OnInit } from '@angular/core';
-import { CarouselImage } from '../../models/carousel-image.model';
+import { CarouselProduct } from '../../../models/carousel-product.model';
 
 @Component({
-  selector: 'ui-carousel-image',
-  templateUrl: './carousel-image.component.html',
+  selector: 'ui-carousel-product',
+  templateUrl: './carousel-product.component.html',
 })
-export class CarouselImageComponent implements  OnInit {
+export class CarouselProductComponent implements  OnInit {
 
-  @Input() items:CarouselImage[] = [];
-  @Input() indicators = true;
-  @Input() controls = true;
-  @Input() autoSlide = false;
-  @Input() slideInterval = 3000; //default to 3 seconds
-  selectedIndex = 0;
+  @Input() items!:CarouselProduct[];
+  @Input()  autoSlide = false;
+  @Input()  slideInterval = 3000; //default to 3 seconds
+   selectedIndex = 0;
+
 
   constructor() {
   }
@@ -25,17 +24,17 @@ export class CarouselImageComponent implements  OnInit {
   }
 
   //changes slide on set slide interval
-  autoSlideItems(){
+   autoSlideItems(){
     setInterval(() =>{
       this.onNextClick();
     }, this.slideInterval);
   }
   //sets the image of the dot/indicator
-  selectItem(i:number){
+   selectItem(i:number){
     this.selectedIndex = i;
   }
 
-  onPrevClick(){
+   onPrevClick(){
     if(this.selectedIndex === 0){
       this.selectedIndex = this.items.length-1;
       return
@@ -43,7 +42,7 @@ export class CarouselImageComponent implements  OnInit {
     this.selectedIndex--;
   }
 
-  onNextClick(){
+   onNextClick(){
     if(this.selectedIndex === this.items.length-1){
       this.selectedIndex = 0;
       return

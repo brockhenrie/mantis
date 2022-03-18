@@ -5,7 +5,7 @@ import { UiModule } from '@mantis/ui';
 import { NgModule } from '@angular/core';
 import { AuthModule } from '@mantis/auth';
 import { ProductDataService } from '@mantis/products';
-import { CoreModule, AuthService, EventBusService } from '@mantis/core';
+import { CoreModule, AuthService } from '@mantis/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 

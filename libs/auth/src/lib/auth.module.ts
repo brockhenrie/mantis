@@ -27,7 +27,7 @@ import { CoreModule } from '@mantis/core';
     AngularFireAuthModule
 
 
-  ],
+  ]
 })
 export class AuthModule {
 

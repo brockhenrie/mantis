@@ -3,9 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
 import { MatModules } from './material';
-import { UiComponentBarrel } from './components/components';
+import {  UiComponents } from './components/components';
 import { CoreModule } from '@mantis/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LockInputComponent } from './components/forms/lock-input/lock-input.component';
+import { ValueAccessorExampleComponent } from './components/forms/value-accessor-example/value-accessor-example.component';
+import { CustomFormFieldControlComponent } from './components/forms/custom-form-field-control/custom-form-field-control.component';
+import { CustomFormFieldContainerComponent } from './components/forms/custom-form-field-container/custom-form-field-container.component';
+import { SearchFomFieldContainerComponent } from './components/forms/search-fom-field-container/search-fom-field-container.component';
 
 @NgModule({
     imports: [
@@ -17,13 +22,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ],
 
     declarations: [
-      ...UiComponentBarrel
+      ...UiComponents
     ],
 
     exports: [
       RouterModule,
-      ...UiComponentBarrel,
+      ...UiComponents,
       ...MatModules,
-      FlexLayoutModule]
+      FlexLayoutModule,
+     ]
 })
 export class UiModule {}

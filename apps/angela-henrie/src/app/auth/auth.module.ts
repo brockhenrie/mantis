@@ -1,4 +1,4 @@
-import { AuthRoutingModule } from './AuthRouting.module';
+import { AuthRoutingModule } from './auth-routing/AuthRouting.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';

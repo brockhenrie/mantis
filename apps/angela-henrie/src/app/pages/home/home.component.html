@@ -10,7 +10,7 @@
       <button (click)="showSpinner = !showSpinner">Hide Spinner</button>
 
         <div class="carousel" *ngIf="products$ | async as products">
-            <ui-carousel-product [items]="products"></ui-carousel-product>
+            <ui-carousel-product [items]="products.products"></ui-carousel-product>
         </div>
     </div>
 </div>

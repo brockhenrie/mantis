@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { catchError, shareReplay } from 'rxjs/operators';
+import { catchError, take } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import {
    Resolve,
@@ -15,15 +15,13 @@ export class HomeProductsResolver implements Resolve<ProductsResolved> {
 
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProductsResolved> {
-console.log(state.root)
     return this.ps.getProducts().pipe(
       map((products: Product[]) =>{
-        console.log(products);
         return {
-          products:products
+          products: products
         }
       }),
-      shareReplay(1),
+      take(1),
       catchError((error: any) =>{
         return of({products:[], error:error})
       })

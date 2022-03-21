@@ -2,8 +2,8 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '@mantis/products';
-import { filter, map, Observable } from 'rxjs';
+import { ProductsResolved } from '@mantis/products';
+import { map, Observable } from 'rxjs';
 
 @Component({
     selector: 'app-home',
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   images = images;
   showSpinner=true;
   backgroundAnimatedImage= '../../../assets/Large_Light_Pink_Rose.png';
-    products$!: Observable<Product[]>;
+    products$!: Observable<ProductsResolved>;
     constructor(private route:ActivatedRoute) {}
 
     ngOnInit(): void {

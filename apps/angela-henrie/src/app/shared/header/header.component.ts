@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '@mantis/core';
 
 @Component({
   selector: 'app-header',

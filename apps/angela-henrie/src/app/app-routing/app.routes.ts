@@ -1,13 +1,12 @@
 import { Routes } from '@angular/router';
+import { HomeProductsResolver } from '@mantis/core';
 import { HomeComponent } from '../pages/home/home.component';
-import { HomeProductsResolver } from './resolvers/home-products.resolver';
 
-export const appRoutes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
       path: 'home',
       component: HomeComponent,
-      data: { animation: 'right' },
       resolve: {
          products: HomeProductsResolver
          }
@@ -17,5 +16,10 @@ export const appRoutes: Routes = [
       loadChildren: () =>
           import('@mantis/products').then((m) => m.ProductsModule)
   },
-  { path: '**', redirectTo: 'home' }
+  {
+    path: 'blog',
+    loadChildren: () =>
+        import('@mantis/blog').then((m) => m.BlogModule)
+},
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

@@ -1,10 +1,9 @@
 import { combineLatest, map, Observable } from 'rxjs';
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
-import { ProductDataService } from './../../product-data.service';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Product } from '../../../../../core/src/lib/models/products/product.model';
+import { Product, ProductDataService } from '@mantis/core';
 
 @Component({
     selector: 'products-page',

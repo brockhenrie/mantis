@@ -1,0 +1,26 @@
+{
+    "projectType": "library",
+    "root": "libs/blog",
+    "sourceRoot": "libs/blog/src",
+    "prefix": "blog",
+    "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/blog"],
+            "options": {
+                "jestConfig": "libs/blog/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": [
+                    "libs/blog/src/**/*.ts",
+                    "libs/blog/src/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": []
+}

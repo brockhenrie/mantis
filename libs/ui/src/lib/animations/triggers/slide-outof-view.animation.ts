@@ -32,7 +32,7 @@ export function slideOutofViewTransition(
 ): AnimationTransitionMetadata {
     return transition('* => void', [
         animate(toEndTime, style({
-          transform: `translateX(-${distance}px)`,
+          transform: `translateX(${distance}px)`,
           opacity:0
         }))
     ]);

@@ -1,6 +1,9 @@
 export * from './lib/api-interfaces';
 export * from './lib/courses/course.model';
 export * from './lib/courses/course.schema';
+export * from './lib/lessons/lesson.model';
+export * from './lib/lessons/lesson.schema';
+
 
 
 export * from './lib/filters/http.filter';

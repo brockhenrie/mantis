@@ -1,0 +1,12 @@
+.blog-page{
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(at bottom,#455a64 10%,#ffe7e7 80% );
+  @include scrollbars(12px, rgb(97, 93, 93), $accent-color);
+
+  .blog-posts-list{
+    margin-top: 1rem;
+  }
+}
+//linear-gradient(to bottom, #ffe7e7,#455a64 )
+ 

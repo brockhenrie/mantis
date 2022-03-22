@@ -47,4 +47,7 @@ export * from './lib/components/forms/value-accessor-example/value-accessor-exam
 export * from './lib/components/background/background-spinner/background-spinner.component';
 // export * from './lib/components/background'
 
-
+//blog
+export * from './lib/components/blog/blog-post/blog-post.component';
+export * from './lib/components/blog/blog-post-preview/blog-post-preview.component';
+// export * from './lib/components/blog/';

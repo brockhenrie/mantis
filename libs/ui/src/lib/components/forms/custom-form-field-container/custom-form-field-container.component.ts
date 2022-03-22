@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './custom-form-field-container.component.html',
   styleUrls: ['./custom-form-field-container.component.scss']
 })
-export class CustomFormFieldContainerComponent implements OnInit {
+export class CustomFormFieldContainerComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

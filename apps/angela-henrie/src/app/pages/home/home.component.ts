@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-<<<<<<< HEAD
-import { ProductsResolved } from '@mantis/products';
-=======
 import {  ProductsResolved } from '@mantis/core';
->>>>>>> 3b86392eb7bb3996d087f46cc32935dec9990349
 import { map, Observable } from 'rxjs';
 
 @Component({
@@ -14,21 +10,12 @@ import { map, Observable } from 'rxjs';
     providers: []
 })
 export class HomeComponent implements OnInit {
-<<<<<<< HEAD
-  state='start';
-  images = images;
-  showSpinner=true;
-  backgroundAnimatedImage= '../../../assets/Large_Light_Pink_Rose.png';
-    products$!: Observable<ProductsResolved>;
-    constructor(private route:ActivatedRoute) {}
-=======
     state: 'spin' | 'stop' = 'spin';
     images = images;
     showSpinner = true;
     backgroundAnimatedImage = '../../../assets/Large_Light_Pink_Rose.png';
     products$!: Observable<ProductsResolved>;
     constructor(private route: ActivatedRoute) {}
->>>>>>> 3b86392eb7bb3996d087f46cc32935dec9990349
 
     ngOnInit(): void {
         this.products$ = this.route.data.pipe(

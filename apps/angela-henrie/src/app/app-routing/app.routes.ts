@@ -12,6 +12,11 @@ export const routes: Routes = [
          }
   },
   {
+    path: 'auth',
+    loadChildren: () =>
+        import('@mantis/auth').then((m) => m.AuthModule)
+},
+  {
       path: 'products',
       loadChildren: () =>
           import('@mantis/products').then((m) => m.ProductsModule)

@@ -1,0 +1,17 @@
+<div>
+  <button
+    mat-icon-button
+    name="like-button"
+    id="like-button"
+  
+  >
+    <mat-icon
+    [color]="heartColor"
+      svgIcon="heart"
+      aria-hidden="false"
+      aria-label="Example thumbs up SVG icon"
+      (click)="toggleLike()"
+      ></mat-icon>
+  </button>
+  <label *ngIf="likes$ | async as likes" for="like-button">{{likes.length }}</label>
+</div>

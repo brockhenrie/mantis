@@ -6,10 +6,13 @@
 <div class="home-page">
   <div class="spacer">
 
+
   </div>
     <div class="footer">
+      <button mat-button (click)="onAnimate()">button</button>
         <div class="carousel" *ngIf="products$ | async as products">
-            <ui-carousel-product [items]="products.products"></ui-carousel-product>
+
+          <ui-carousel-product [items]="products.products"></ui-carousel-product>
         </div>
     </div>
 </div>

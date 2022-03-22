@@ -2,4 +2,7 @@
 <section class="blog-page">
   <ui-value-accessor-example></ui-value-accessor-example>
   <ui-search-form-field-container></ui-search-form-field-container>
+  <div class="blog-posts-list" *ngFor="let post of posts$ | async">
+  <ui-blog-post-preview [post]="post"></ui-blog-post-preview>
+</div>
 </section>

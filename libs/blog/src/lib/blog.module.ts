@@ -4,7 +4,7 @@ import { BlogRoutingModule } from './routing/blog-routing.module';
 import { BlogListPageComponent } from './pages/blog-list-page/blog-list-page.component';
 import { BlogShellComponent } from './blog-shell/blog-shell.component';
 import { UiModule } from '@mantis/ui';
-import { CoreModule } from '@mantis/core';
+import {  CoreModule } from '@mantis/core';
 
 @NgModule({
     imports: [
@@ -16,6 +16,9 @@ import { CoreModule } from '@mantis/core';
     declarations: [
       BlogListPageComponent,
       BlogShellComponent
+    ],
+    providers:[
+
     ]
 })
 export class BlogModule {}

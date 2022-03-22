@@ -6,11 +6,8 @@ import { MatModules } from './material';
 import {  UiComponents } from './components/components';
 import { CoreModule } from '@mantis/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { LockInputComponent } from './components/forms/lock-input/lock-input.component';
-import { ValueAccessorExampleComponent } from './components/forms/value-accessor-example/value-accessor-example.component';
-import { CustomFormFieldControlComponent } from './components/forms/custom-form-field-control/custom-form-field-control.component';
-import { CustomFormFieldContainerComponent } from './components/forms/custom-form-field-container/custom-form-field-container.component';
-import { SearchFomFieldContainerComponent } from './components/forms/search-fom-field-container/search-fom-field-container.component';
+import { HeartComponent } from './svg/heart/heart.component';
+
 
 @NgModule({
     imports: [
@@ -22,14 +19,18 @@ import { SearchFomFieldContainerComponent } from './components/forms/search-fom-
     ],
 
     declarations: [
-      ...UiComponents
-    ],
+      ...UiComponents,
+      HeartComponent,
+
+    ], 
 
     exports: [
       RouterModule,
       ...UiComponents,
       ...MatModules,
       FlexLayoutModule,
+      HeartComponent,
+
      ]
 })
 export class UiModule {}

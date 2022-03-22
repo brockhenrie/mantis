@@ -7,7 +7,7 @@ import { fadeInSpinSlideOut } from '../../../animations/triggers/rotate.animatio
     selector: 'ui-background-spinner',
     templateUrl: './background-spinner.component.html',
     animations: [
-        fadeInSpinSlideOut('rose-spin', 360, 60000)
+        fadeInSpinSlideOut('rose-spin', 360, 30000)
     ]
 })
 export class BackgroundSpinnerComponent implements OnInit {

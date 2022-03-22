@@ -1,0 +1,18 @@
+.blog-post{
+  @include scrollbars(12px, rgb(97, 93, 93), $accent-color);
+  &-content{
+  &-right{
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+
+
+  }
+
+  &-image{
+    padding: 1rem;
+    max-width:500px;
+    min-width: 383px;
+    max-height:500px;
+  }
+}

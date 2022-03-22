@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { NgEventBus } from 'ng-event-bus';
 import { MetaData } from 'ng-event-bus/lib/meta-data';
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class EventBusService {
-    constructor(private eb: NgEventBus) {}
+    constructor( private eb: NgEventBus) {}
 
     createEvent(event: string, data: any) {
         this.eb.cast(event, { ...data });

@@ -1,13 +1,13 @@
 import { Route } from "@angular/router";
-import { AuthComponent } from "../auth.component";
-import { LoginComponent } from "../login/login.component";
-import { SignupComponent } from "../signup/signup.component";
+import { AuthShellComponent } from "../auth.component";
+import { LoginComponent, SignupComponent } from "@mantis/ui";
+
 
 
 export const authRoutes: Route[] = [
   {
     path: 'auth',
-    component: AuthComponent,
+    component: AuthShellComponent,
     data: {animtion: 'right'},
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },

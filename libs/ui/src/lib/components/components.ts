@@ -20,6 +20,9 @@ import { CustomFormFieldControlComponent } from './forms/custom-form-field-contr
 import { LockInputComponent } from './forms/lock-input/lock-input.component';
 import { SearchFomFieldContainerComponent } from './forms/search-fom-field-container/search-fom-field-container.component';
 import { ValueAccessorExampleComponent } from './forms/value-accessor-example/value-accessor-example.component';
+import { BlogPostPreviewComponent } from './blog/blog-post-preview/blog-post-preview.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+
 
 export const UiComponents = [
     ShellComponent,
@@ -43,6 +46,8 @@ export const UiComponents = [
     CustomFormFieldControlComponent,
     CustomFormFieldContainerComponent,
     SearchFomFieldContainerComponent,
+    BlogPostPreviewComponent,
+    BlogPostComponent
 ];
 
 

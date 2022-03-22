@@ -5,7 +5,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'blog-shell',
   templateUrl: './blog-shell.component.html',
-  styleUrls: ['./blog-shell.component.scss']
 })
 export class BlogShellComponent implements OnInit {
 
@@ -15,3 +14,4 @@ export class BlogShellComponent implements OnInit {
   }
 
 }
+ 

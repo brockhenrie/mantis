@@ -1,0 +1,10 @@
+.blog-shell{
+  width: 100%;
+  height: 100%;
+
+  @include scrollbars(12px, rgb(97, 93, 93), $accent-color);
+
+  router-outlet{
+    // padding: 1rem;
+  }
+}

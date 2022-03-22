@@ -1,0 +1,22 @@
+<mat-card class="blog-post" *ngIf="post$ | async as post">
+  <div>
+    <mat-card-title class="blog-post-title">{{ post.title }}</mat-card-title>
+  </div>
+  <div fxLayout.lt-xs="column" fxLayout.gt-xs="row" class="blog-post-content">
+    <div class="blog-post-content-left">
+      <img
+        class="blog-post-image"
+        *ngIf="post.image"
+        matCardImage
+        [src]="post.image"
+      />
+    </div>
+    <div class="blog-post-content-right">
+      {{ post.content }}
+    </div>
+  </div>
+
+  <div class="blog-post-likes" align="start">
+    <mat-icon svgIcon="heart" ></mat-icon>
+  </div>
+</mat-card>

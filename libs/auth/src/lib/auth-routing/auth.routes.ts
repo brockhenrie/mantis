@@ -6,7 +6,7 @@ import { LoginComponent, SignupComponent } from "@mantis/ui";
 
 export const authRoutes: Route[] = [
   {
-    path: 'auth',
+    path: '',
     component: AuthShellComponent,
     data: {animtion: 'right'},
     children: [

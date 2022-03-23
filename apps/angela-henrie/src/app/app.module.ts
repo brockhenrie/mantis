@@ -1,4 +1,3 @@
-import { angelaHenrieEnvironment } from './../../../../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { UiModule } from '@mantis/ui';
@@ -15,6 +14,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidenavDrawerComponent } from './shared/sidenav-drawer/sidenav-drawer.component';
+import { environment } from '../environments/environment';
+
 
 
 @NgModule({
@@ -28,14 +29,13 @@ import { SidenavDrawerComponent } from './shared/sidenav-drawer/sidenav-drawer.c
         BrowserModule,
         CoreModule,
         UiModule,
-        AuthModule,
         BrowserAnimationsModule,
-        AngularFireModule.initializeApp(angelaHenrieEnvironment.firebase),
+        AngularFireModule.initializeApp(environment.firebase),
         AppRoutingModule
     ],
     providers: [
       AuthService,
-      ProductDataService,
+      ProductDataService
     ],
     bootstrap: [AppComponent]
 })

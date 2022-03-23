@@ -3,7 +3,7 @@
     mat-icon-button
     name="like-button"
     id="like-button"
-  
+
   >
     <mat-icon
     [color]="heartColor"
@@ -13,5 +13,5 @@
       (click)="toggleLike()"
       ></mat-icon>
   </button>
-  <label *ngIf="likes$ | async as likes" for="like-button">{{likes.length }}</label>
+  <label *ngIf="likes$ | async as likes" for="like-button">{{count }}</label>
 </div>

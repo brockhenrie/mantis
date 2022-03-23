@@ -20,7 +20,7 @@ import { CoreModule } from '@mantis/core';
     UiModule,
     AuthRoutingModule,
     AngularFireAuthModule
-
+ 
   ],
   exports: [
     AuthRoutingModule,

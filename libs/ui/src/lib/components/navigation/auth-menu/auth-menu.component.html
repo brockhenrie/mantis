@@ -7,11 +7,38 @@
 <mat-menu class="auth-menu" #auth="matMenu">
     <a
         mat-menu-item
-        *ngFor="let link of authLinks"
-        [routerLink]="[link.link]"
+        *ngIf="loggedOut$ | async"
+        routerLink="auth/signup"
         (click)="closeSidenav()"
-    >
-        <mat-icon>{{ link.icon }}</mat-icon>
-        {{ link.label }}
+        >
+        <mat-icon>newspaper</mat-icon>
+        Signup
     </a>
+    <a
+    mat-menu-item
+    *ngIf="loggedOut$ | async"
+    routerLink="auth/login"
+    (click)="closeSidenav()"
+    >
+    <mat-icon>login</mat-icon>
+    Login
+</a>
+<a
+mat-menu-item
+*ngIf="loggedIn$ | async"
+routerLink="auth/account"
+(click)="closeSidenav()"
+>
+<mat-icon>person</mat-icon>
+Account
+</a>
+<a
+mat-menu-item
+*ngIf="loggedIn$ | async"
+routerLink="auth/logout"
+(click)="closeSidenav(); logout()"
+>
+<mat-icon>logout</mat-icon>
+Logout
+</a>
 </mat-menu>
